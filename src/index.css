@@ -50,6 +50,26 @@ body {
   width: 100%;
 }
 
+/* Resume Button Styles */
+.resume-btn {
+  color: #eee !important;
+  border-radius: 50px;
+  font-weight: 500;
+  border: none;
+}
+
+
+
+/* Make it stand out on mobile */
+@media (max-width: 992px) {
+  .resume-btn {
+    margin: 10px 15px 0;
+    width: calc(100% - 30px);
+    justify-content: center;
+  }
+}
+
+
 /* Hero & About Section */
 .hero-about-section {
   background: linear-gradient(135deg, #FFECB3, #fff);

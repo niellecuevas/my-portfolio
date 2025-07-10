@@ -21,29 +21,69 @@ function App() {
     <div className="portfolio-app">
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand fw-bold" href="#">Raniella Cuevas</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#experience">Experience</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#projects">Projects</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#achievements">Achievements</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
+        <div className="container-fluid px-4"> 
+        <a 
+          className="navbar-brand fw-bold" 
+          href="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+         Raniella Cuevas
+        </a>
+          
+          {/* Centered Navigation */}
+          <div className="d-flex justify-content-center flex-grow-1">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav mx-auto">
+                <li className="nav-item">
+                  <a className="nav-link" href="#about">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#experience">Experience</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#projects">Projects</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#achievements">Achievements</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="d-none d-lg-flex"> {/* Hidden on mobile */}
+            <a
+              href="https://drive.google.com/uc?export=download&id=1-GxmxMGUmCE-qFKxX91_ibU_DAJ6kzWU"
+              className="btn resume-btn d-flex align-items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download me-2" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+              </svg>
+              Resume
+            </a>
+          </div>
+          
+          {/* Mobile Resume Button (shown only on mobile) */}
+          <div className="d-lg-none">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1-GxmxMGUmCE-qFKxX91_ibU_DAJ6kzWU"
+              className="btn resume-btn d-flex align-items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download me-2" viewBox="0 0 16 16">
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+              </svg>
+              Resume
+            </a>
           </div>
         </div>
       </nav>

@@ -2,6 +2,7 @@
 import './App.css'
 import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { FaGithub, FaEnvelope, FaLinkedin, FaChevronDown } from 'react-icons/fa';
 
 function App() {
@@ -164,7 +165,13 @@ function App() {
               <div className="project-card">
                 <div className="project-img-placeholder project-img-1">
                   <div className="project-overlay">
-                    <a href="#" className="btn btn-outline-light">View Details</a>
+                    <button 
+                      className="btn btn-outline-light" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#project1Modal"
+                    >
+                      View Details
+                    </button>
                   </div>
                 </div>
                 <div className="project-body">
@@ -182,16 +189,91 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Modal for Project 1 */}
+            <div className="modal fade" id="project1Modal" tabIndex="-1" aria-labelledby="project1ModalLabel" aria-hidden="true">
+              <div className="modal-dialog modal-xl modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="project1ModalLabel">Tour Operations Planning System</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div id="project1Carousel" className="carousel slide" data-bs-ride="carousel">
+                          <div className="carousel-inner">
+                            <div className="carousel-item active">
+                              <img src="project1.png" className="d-block w-100" alt="Project screenshot" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project1-1.jpg" className="d-block w-100" alt="Project screenshot 1" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project1-2.jpg" className="d-block w-100" alt="Project screenshot 2" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project1-3.jpg" className="d-block w-100" alt="Project screenshot 3" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project1-4.jpg" className="d-block w-100" alt="Project screenshot 4" />
+                            </div>
+                          </div>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#project1Carousel" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#project1Carousel" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <h6>Project Description</h6>
+                        <p>A smart web-based system designed to analyze travel data and support informed decision-making for tour operators. It features real-time analytics and demand forecasting to boost operational efficiency and maximize profitability.</p>
+                        
+                        <h6 className="mt-4">Key Features</h6>
+                        <ul>
+                          <li>Digitized booking and record system</li>
+                          <li>Demand forecasting by destination</li>
+                          <li>Accurate model selection for prediction</li>
+                          <li>Dynamic pricing based on demand</li>
+                        </ul>
+                        <div className="project-tech mt-3">
+                          <span>PHP</span>
+                          <span>MySQL</span>
+                          <span>HTML5</span>
+                          <span>CSS3</span>
+                          <span>Bootstrap</span>
+                          <span>JavaScript</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <div className="col-md-6 col-lg-4">
               <div className="project-card">
                 <div className="project-img-placeholder project-img-2">
                   <div className="project-overlay">
-                    <a href="#" className="btn btn-outline-light">View Details</a>
+                  <button 
+                    className="btn btn-outline-light" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#project2Modal"
+                  >
+                    View Details
+                  </button>
                   </div>
                 </div>
                 <div className="project-body">
-                  <h5>Student Violation System</h5>
+                  <h5>Student Conduct Violation System</h5>
                   <p>A system designed to modernize student violation tracking for the school university.</p>
                   <div className="project-tech">
                     <span>PHP</span>
@@ -204,12 +286,90 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Modal for Project 2 */}
+            <div className="modal fade" id="project2Modal" tabIndex="-1" aria-labelledby="project2ModalLabel" aria-hidden="true">
+              <div className="modal-dialog modal-xl modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="project2ModalLabel">Student Conduct Violation System</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div id="project2Carousel" className="carousel slide" data-bs-ride="carousel">
+                          <div className="carousel-inner">
+                            <div className="carousel-item active">
+                              <img src="project2.png" className="d-block w-100" alt="Project screenshot" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project2-1.png" className="d-block w-100" alt="Project screenshot 1" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project2-2.png" className="d-block w-100" alt="Project screenshot 2" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project2-3.png" className="d-block w-100" alt="Project screenshot 3" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project2-4.png" className="d-block w-100" alt="Project screenshot 4" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project2-5.png" className="d-block w-100" alt="Project screenshot 5" />
+                            </div>
+                          </div>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#project2Carousel" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#project2Carousel" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <h6>Project Description</h6>
+                        <p>A smart web-based system designed to analyze travel data and support informed decision-making for tour operators. It features real-time analytics and demand forecasting to boost operational efficiency and maximize profitability.</p>
+                        
+                        <h6 className="mt-4">Key Features</h6>
+                        <ul>
+                          <li>Digitized booking and record system</li>
+                          <li>Demand forecasting by destination</li>
+                          <li>Accurate model selection for prediction</li>
+                          <li>Dynamic pricing based on demand</li>
+                        </ul>
+                        <div className="project-tech mt-3">
+                          <span>PHP</span>
+                          <span>MySQL</span>
+                          <span>HTML5</span>
+                          <span>CSS3</span>
+                          <span>Bootstrap</span>
+                          <span>JavaScript</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="https://github.com/niellecuevas/sia-project" target="_blank" className="btn btn-primary">View Source Code</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <div className="col-md-6 col-lg-4">
               <div className="project-card">
                 <div className="project-img-placeholder project-img-3">
                   <div className="project-overlay">
-                    <a href="#" className="btn btn-outline-light">View Details</a>
+                    <button 
+                      className="btn btn-outline-light" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#project3Modal"
+                    >
+                      View Details
+                    </button>
                   </div>
                 </div>
                 <div className="project-body">
@@ -221,6 +381,74 @@ function App() {
                     <span>HTML5</span>
                     <span>CSS3</span>
                     <span>JavaScript</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Modal for Project 3 */}
+            <div className="modal fade" id="project3Modal" tabIndex="-1" aria-labelledby="project3ModalLabel" aria-hidden="true">
+              <div className="modal-dialog modal-xl modal-dialog-centered">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title" id="project3ModalLabel">Student Conduct Violation System</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div id="project3Carousel" className="carousel slide" data-bs-ride="carousel">
+                          <div className="carousel-inner">
+                            <div className="carousel-item active">
+                              <img src="project3.jpg" className="d-block w-100" alt="Project screenshot" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project3-1.jpg" className="d-block w-100" alt="Project screenshot 1" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project3-2.jpg" className="d-block w-100" alt="Project screenshot 2" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project3-3.jpg" className="d-block w-100" alt="Project screenshot 3" />
+                            </div>
+                            <div className="carousel-item">
+                              <img src="project/project3-4.jpg" className="d-block w-100" alt="Project screenshot 4" />
+                            </div>
+                          </div>
+                          <button className="carousel-control-prev" type="button" data-bs-target="#project3Carousel" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                          <button className="carousel-control-next" type="button" data-bs-target="#project3Carousel" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className=""></span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <h6>Project Description</h6>
+                        <p>A Stroop game, themed around colorful cookies and engaging cognitive challenges.</p>
+                        
+                        <h6 className="mt-4">Key Features</h6>
+                        <ul>
+                          <li>Interactive gameplay based on the classic Stroop effect</li>
+                          <li>Colorful cookie-themed UI for a fun, playful experience</li>
+                          <li>Timed rounds to test and improve reaction speed</li>
+                          <li>Score tracking</li>
+                        </ul>
+                        <div className="project-tech mt-3">
+                          <span>Python</span>
+                          <span>Django</span>
+                          <span>HTML5</span>
+                          <span>CSS3</span>
+                          <span>JavaScript</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="https://github.com/niellecuevas/color_cookies" target="_blank" className="btn btn-primary">View Source Code</a>
                   </div>
                 </div>
               </div>

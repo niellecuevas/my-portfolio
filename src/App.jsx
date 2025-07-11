@@ -331,14 +331,14 @@ function App() {
                       </div>
                       <div className="col-md-6">
                         <h6>Project Description</h6>
-                        <p>A smart web-based system designed to analyze travel data and support informed decision-making for tour operators. It features real-time analytics and demand forecasting to boost operational efficiency and maximize profitability.</p>
+                        <p>A proposed web system designed to modernize and enhance the currently implemented system for the school university.</p>
                         
                         <h6 className="mt-4">Key Features</h6>
                         <ul>
-                          <li>Digitized booking and record system</li>
-                          <li>Demand forecasting by destination</li>
-                          <li>Accurate model selection for prediction</li>
-                          <li>Dynamic pricing based on demand</li>
+                          <li>Allows students to track their violations in real time.</li>
+                          <li>Minimizes errors in data entry for improved accuracy.</li>
+                          <li>Notifies students of disciplinary actions that need their attention.</li>
+                          <li>Improves security of managed data.</li>
                         </ul>
                         <div className="project-tech mt-3">
                           <span>PHP</span>

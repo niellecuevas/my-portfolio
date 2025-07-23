@@ -192,7 +192,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-5 bg-light" data-aos="fade-up">
+      <section id="projects" className="py-5 bg-light" >
         <div className="container">
         <ClickSpark
                   sparkColor="#FFC107"
@@ -202,7 +202,7 @@ function App() {
                   duration={500}
                   easing="ease-out"
                 >
-          <div className="section-header text-center mb-5">
+          <div className="section-header text-center mb-5" data-aos="fade-up">
             <h2 className="section-title">Featured Projects</h2>
             <p className="section-subtitle">A selection of my recent work</p>
           </div>

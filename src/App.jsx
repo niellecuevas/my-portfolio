@@ -54,59 +54,68 @@ function App() {
     <div className="portfolio-app">
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div className="container-fluid px-4"> 
-        <a 
-          className="navbar-brand fw-bold" 
-          href="#" 
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
-         Raniella Cuevas
-        </a>
+        <div className="container-fluid px-3 px-sm-4">
+          {/* Brand/Logo */}
+          <a 
+            className="navbar-brand fw-bold me-auto" 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            Raniella Cuevas
+          </a>
           
-          {/* Centered Navigation */}
-          <div className="d-flex justify-content-center flex-grow-1">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav mx-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="#about">Home</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#experience">Experience</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#projects">Projects</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#achievements">Achievements</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#contact">Contact</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="d-none d-lg-flex"> {/* Hidden on mobile */}
-            <a
-              href="https://drive.google.com/uc?export=download&id=1-GxmxMGUmCE-qFKxX91_ibU_DAJ6kzWU"
-              className="btn resume-btn d-flex align-items-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download me-2" viewBox="0 0 16 16">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-              </svg>
-              Resume
-            </a>
+          {/* Toggler Button */}
+          <button 
+            className="navbar-toggler ms-2" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          
+          {/* Navigation Links (including mobile resume button) */}
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="#about">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#experience">Experience</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#projects">Projects</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#achievements">Achievements</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">Contact</a>
+              </li>
+              {/* Mobile Resume Button (inside menu) */}
+              <li className="nav-item d-lg-none">
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1-GxmxMGUmCE-qFKxX91_ibU_DAJ6kzWU"
+                  className="nav-link"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-download me-2" viewBox="0 0 16 16">
+                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                  </svg>
+                  Resume
+                </a>
+              </li>
+            </ul>
           </div>
           
-          {/* Mobile Resume Button (shown only on mobile) */}
-          <div className="d-lg-none">
+          {/* Desktop Resume Button (visible only on large screens) */}
+          <div className="d-none d-lg-flex ms-auto">
             <a
               href="https://drive.google.com/uc?export=download&id=1-GxmxMGUmCE-qFKxX91_ibU_DAJ6kzWU"
               className="btn resume-btn d-flex align-items-center"
@@ -120,52 +129,56 @@ function App() {
           </div>
         </div>
       </nav>
+
       {/* Combined Hero & About Section */}
-        <section id="about" className="hero-about-section">
-          {/* Squares Background Layer */}
-          <div className="squares-background">
-            <Squares 
-              speed={0.7} 
-              squareSize={40}
-              direction='diagonal' // up, down, left, right, diagonal
-              borderColor='#fff'
-              hoverFillColor='#5D4037'
-            />
-          </div>
-          <ClickSpark
-            sparkColor="#FFC107"
-            sparkSize={12}
-            sparkRadius={15}
-            sparkCount={8}
-            duration={500}
-            easing="ease-out"
-          >  
-        <div className="container-fluid">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-5 mb-lg-0">
-              <div className="hero-content"  data-aos="fade-in">       
-                <h1 className="display-4 fw-bold mb-4">Raniella Cuevas</h1>
-                <h2 className="h3 mb-4">Web Developer & Tech Enthusiast</h2>
-                <p className="lead mb-4">
-                  Passionate about creating beautiful, functional web experiences with a focus on user-centered design and clean code.
-                </p>
-                <div className="hero-btns d-flex flex-wrap justify-content-center">
-                  <a href="#projects" className="btn btn-primary btn-lg mx-2 my-1">
-                    View My Work
-                  </a>
-                  <a href="#contact" className="btn btn-outline-light btn-lg mx-2 my-1">
-                    Contact Me
-                  </a>
+      <section id="about" className="hero-about-section">
+        {/* Squares Background Layer */}
+        <div className="squares-background">
+          <Squares 
+            speed={0.7} 
+            squareSize={40}
+            direction='diagonal'
+            borderColor='#fff'
+            hoverFillColor='#5D4037'
+          />
+        </div>
+        <ClickSpark
+          sparkColor="#FFC107"
+          sparkSize={12}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={500}
+          easing="ease-out"
+        >  
+          <div className="container-fluid">
+            <div className="row align-items-center">
+              {/* Image column - order first on mobile */}
+              <div className="col-lg-5 order-1 order-lg-1 pt-5 pt-lg-0">
+                <div className="profile-bubble" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                  <div className="profile-img-placeholder"></div>
+                </div>
+              </div>
+              
+              {/* Content column - order second on mobile */}
+              <div className="col-lg-6 mb-5 mb-lg-0 order-2 order-lg-2">
+                <div className="hero-content text-center text-lg-start" data-aos="fade-in">       
+                  <h1 className="display-4 fw-bold mb-3">Raniella Cuevas</h1>
+                  <h2 className="h4 mb-3">Web Developer & Tech Enthusiast</h2>
+                  <p className="lead mb-4">
+                    Passionate about creating beautiful, functional web experiences with a focus on user-centered design and clean code.
+                  </p>
+                  <div className="hero-btns d-flex flex-wrap justify-content-center justify-content-lg-start">
+                    <a href="#projects" className="btn btn-primary btn-lg mx-2 my-1">
+                      View My Work
+                    </a>
+                    <a href="#contact" className="btn btn-outline-light btn-lg mx-2 my-1">
+                      Contact Me
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6">
-              <div className="profile-bubble"  data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                <div className="profile-img-placeholder"></div>
-              </div>
-            </div>
           </div>
-        </div>
         </ClickSpark>     
       </section>
 
@@ -192,7 +205,7 @@ function App() {
                 <h4>PHP Developer Intern</h4>
                 <h5>Consultare Inc. Group</h5>
                 <p className="text-muted">Feb. 2025 - May 2025</p>
-                <ul>
+                <ul className='text-start'>
                   <li>Developed CRUD operations and designed normalized databases</li>
                   <li>Wrote efficient SQL queries and built backend APIs</li>
                   <li>Collaborated with frontend teams and used Git for version control</li>

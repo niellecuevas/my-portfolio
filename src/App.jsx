@@ -8,6 +8,7 @@ import ClickSpark from './ClickSpark';
 import Squares from './Squares';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
 function App() {
   // Add smooth scrolling for anchor links
@@ -35,6 +36,11 @@ function App() {
       duration={500}
       easing="ease-out"
     >
+      <Helmet>
+        <title>Raniella Cuevas | Portfolio</title>
+        <meta name="description" content="Portfolio website of Raniella Cuevas with web dev projects and contact info." />
+      </Helmet>
+      
     <div className="portfolio-app">
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">

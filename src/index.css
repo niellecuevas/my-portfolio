@@ -9,12 +9,42 @@
   --accent: #FF7043;       /* Orange accent */
 }
 
+/* Remove all default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
   color: var(--dark);
   background-image: url('/white-diamond.png');
   background-color: #FFECB3;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  overflow-x: hidden;
+}
+
+html {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+/* Ensure root div takes full width */
+#root {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.portfolio-app {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Navigation */
@@ -22,6 +52,8 @@ body {
   background-color: var(--dark) !important;
   padding: 15px 0;
   transition: all 0.3s ease;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 .navbar.scrolled {
@@ -58,8 +90,6 @@ body {
   border: none;
 }
 
-
-
 /* Make it stand out on mobile */
 @media (max-width: 992px) {
   .resume-btn {
@@ -69,7 +99,6 @@ body {
   }
 }
 
-
 /* Hero & About Section */
 .hero-about-section {
   background: linear-gradient(135deg, #FFECB3, #fff);
@@ -77,6 +106,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 0 0 10px 10px;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 .hero-content {
@@ -85,12 +116,11 @@ body {
   padding-left: 15px; /* Add some padding to prevent text from touching edges */
 }
 
-
 .profile-bubble {
   width: 350px;
   height: 350px;
   background-color: var(--primary);
-  border-radius: 50%;
+  border-radius: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +131,7 @@ body {
 .profile-img-placeholder {
   width: 90%;
   height: 90%;
-  border-radius: 50%;
+  border-radius: 10%;
   background-color: #FFECB3;
   background-image: url('/picture.png');
   background-size: cover;
@@ -130,6 +160,12 @@ body {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
   40% { transform: translateY(-20px) translateX(-50%); }
   60% { transform: translateY(-10px) translateX(-50%); }
+}
+
+/* Section Full Width */
+section {
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 /* Experience Section */
@@ -226,6 +262,9 @@ body {
   background-image: url('/project3.jpg'); /* e-commerce image */
 }
 
+.project-img-4 {
+  background-image: url('/project4.png'); /* e-commerce image */
+}
 
 .project-overlay {
   position: absolute;
@@ -295,7 +334,6 @@ body {
   height: 40px;
   object-fit: contain;
 }
-
 
 .achievement-card:hover {
   transform: translateY(-5px);
@@ -378,11 +416,31 @@ body {
   color: var(--secondary);
 }
 
-/* Footer */
+/* Footer - Full Width */
 footer {
-  width: 100%;
+  width: 100% !important;
   background-color: var(--dark);
   color: var(--light);
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override Bootstrap's container-fluid to be truly full width */
+footer .container-fluid {
+  padding-left: var(--bs-gutter-x, 1.5rem) !important;
+  padding-right: var(--bs-gutter-x, 1.5rem) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Bootstrap Container Overrides */
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Responsive Adjustments */
@@ -558,7 +616,6 @@ footer {
 .carousel-control-next {
   background-color: rgb(48, 21, 21);
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

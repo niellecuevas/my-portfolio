@@ -38,9 +38,19 @@ function App() {
     >
       <Helmet>
         <title>Raniella Cuevas | Portfolio</title>
-        <meta name="description" content="Portfolio website of Raniella Cuevas with web dev projects and contact info." />
+        <meta
+          name="description"
+          content="Portfolio website of Raniella Cuevas showcasing web development projects, skills, and contact info."
+        />
+        <meta property="og:title" content="Raniella Cuevas | Portfolio" />
+        <meta
+          property="og:description"
+          content="Check out my web development portfolio, projects, and contact information."
+        />
+        <meta property="og:image" content="/picture.png" />
+        <meta property="og:url" content="https://raniella-cuevas-portfolio.vercel.app/" />
       </Helmet>
-      
+
     <div className="portfolio-app">
       {/* Navigation */}
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">

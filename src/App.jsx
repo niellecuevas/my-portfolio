@@ -56,7 +56,7 @@ function App() {
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <div className="container-fluid px-3 px-sm-4">
           {/* Brand/Logo */}
-          <a 
+          <a  
             className="navbar-brand fw-bold me-auto" 
             href="#" 
             onClick={(e) => {
